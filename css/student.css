@@ -1,0 +1,43 @@
+.student_info {
+    width: 80%;
+    background-color: #000000;
+    margin-top: 50px;
+    border-collapse: collapse;
+    border: 1px solid #171717;
+    border-radius: 14%;
+}
+
+.student_info_td {
+    width: 90%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: #ffffff;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: #ffffff;
+}
+hr{
+    margin: 0 auto;
+    width: 60%;
+    color: #ffffff;
+}
+.data_cells{
+    width: 100%;
+    margin-bottom: 5%;
+    background-color: #000000;
+    border: 1px solid #171717;
+border-radius: 14%;
+text-align: center;
+}
+h8{
+    font-size: 20px;
+color: #1d49a3;
+margin: auto;
+}
+h9{
+font-size: 20px;
+color: #ffffff;
+margin: auto;
+}

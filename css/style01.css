@@ -1,0 +1,266 @@
+a{
+	text-decoration: none;
+}
+.navbar{
+    width: 100%;
+    height: 8vh;
+    background-color: #000000;
+}
+.navbar02{
+  width: 100%;
+  height: 8vh;
+  background-color: #000000;
+}
+.posting {
+	margin-top: 5%;
+	border: 3px solid #40bb61;
+	background-color: black;
+	color: #ffffff;
+	text-align: center;
+	width:60%;
+    padding:1%;
+	border-radius: 20px;
+	font-family:inherit;
+    font-size: inherit;
+}
+.S_bar{
+	color: #ffffff;
+text-align: center;
+	border: 1px solid #40bb61;
+	border-radius: 10%;
+	border-width: 100%;
+	background-color: black;
+	padding: 0;
+  cursor: pointer;
+	}
+.S_bar:hover{
+	background-color:#a2ffbb;
+	color: black;
+	}
+  .Commenting {
+    border: 3px solid #40bb61;
+    width:40%;
+      padding:0.5%;
+    border-radius: 10px;
+    font-family:inherit;
+      font-size: small;
+  }
+  .Commenting02 {
+    border: 3px solid #40bb61;
+    width:30%;
+      padding:0.5%;
+    border-radius: 10px;
+    font-family:inherit;
+    font-size: small;
+    margin-top: 2%;
+  }
+  .Category{
+    width: 40%;
+    padding: 0.5%;
+    border-radius: 10%;
+    border: 3px solid #40bb61;
+    text-align: center;
+    font-family:inherit;
+      font-size: inherit;
+  }
+hr{
+    width: 100%;
+    color: #7e7e7e;
+}
+.home-bars{
+	background-color:#000000;
+	width:95%;
+	margin-top:2%;
+	margin-bottom:2%;
+}
+.data_cells{
+    width: 100%;
+    margin-bottom: 5%;
+    background-color: #000000;
+text-align: center;
+}
+.loogo{
+	width:100%;
+}
+.Formclass{
+    height: 96vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Formclass02{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MainForm{
+    width: 50%;
+    background-color: #000000;
+}
+.MainForm:hover{
+  width: 50%;
+  background-color: #000000;
+  box-shadow: 10px 10px 20px #40bb6196;
+}
+.logomain{
+    width: 20%;
+}
+.input{
+    width: 40%;
+    padding: 1%;
+    border-radius: 10%;
+    border-color: #008724;
+}
+.Program{
+    width: 40%;
+    padding: 1%;
+    border-radius: 10%;
+    border-color: #008724;
+    text-align: center;
+}
+.result_input{
+  width: 95%;
+  border-radius: 5%;
+  border-color: hsl(136, 100%, 77%);
+}
+
+.profile{
+    width: 20%;
+    margin-top: 5%;
+}
+label{
+    font-size: 20px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5%;
+}
+.button-value {
+    border: 2px solid #004713;
+    padding: 1em 2em;
+    border-radius: 30%;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .button-value:hover {
+   background-color:#00be33;
+   color: #000000;
+  }
+  .button-value-02 {
+    border: 2px solid #004713;
+    padding: 1% 7em;
+    border-radius: 20%;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .button-value-02:hover {
+    background-color:#00be33;
+    color: #000000;
+   }
+  h1{
+    margin: 0%;
+    font-size: 40px;
+  }
+  h2{    
+    font-size: 35px;
+    margin: 0%;  }
+  h3{
+    font-size: 30px;
+    margin: 0%; }
+  h4{
+    font-size: 25px;
+    margin: 0%; }
+  h5{
+    font-size: 20px;
+    margin: 0%; }
+  h6{
+    margin: 0%;
+    font-size: 15px;
+    margin: 0%;}
+  h7{
+    font-size: 10px;
+    margin: 0%; }
+  h8{
+        font-size: 20px;
+    color: #51d974;
+    margin: auto;
+}
+h9{
+    font-size: 20px;
+color: #ffffff;
+margin: auto;
+}
+  /*--------------------------------------------------------------- max-width:900px --------------------------------------------*/
+
+@media only screen and (max-width:900px)
+{
+    h1{
+        font-size: 35px;
+        margin: 0%;}
+      h2{
+        font-size: 30px;
+        margin: 0%;}
+      h3{
+        font-size: 25px;
+        margin: 0%;}
+      h4{
+        font-size: 20px;
+        margin: 0%;}
+      h5{
+        font-size: 15px;
+        margin: 0%;}
+      h6{
+        font-size: 10px;
+        margin: 0%;}
+      h7{
+        font-size: 7px;
+        margin: 0%;} 
+        h8{
+            font-size: 15px;
+        color: #51d974;
+        margin: auto;
+    }
+    h9{
+        font-size: 15px;
+    color: #ffffff;
+    margin: auto;
+    }
+}
+/*--------------------------------------------------------------- max-width:600px --------------------------------------------*/
+
+@media only screen and (max-width:600px)
+{
+    h1{
+        font-size: 30px;
+        margin: 0%;}
+      h2{
+        font-size: 25px;
+        margin: 0%;}
+      h3{
+        font-size: 20px;
+        margin: 0%;}
+      h4{
+        font-size: 15px;
+        margin: 0%;}
+      h5{
+        font-size: 10px;
+        margin: 0%;}
+      h6{
+        font-size: 7px;
+        margin: 0%;}
+      h7{
+        font-size: 5px;
+        margin: 0%;} 
+        h8{
+            font-size: 12px;
+        color: #51d974;
+        margin: auto;
+    }
+    h9{
+        font-size: 12px;
+    color: #ffffff;
+    margin: auto;
+    }
+}

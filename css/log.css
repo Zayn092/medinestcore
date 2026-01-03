@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated background particles */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(135, 206, 250, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(135, 206, 250, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(135, 206, 250, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Header Logo Section */
+.logo-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+  color: #87cefa;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.logo-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+  color: #5f9ea0;
+  text-shadow: 0 0 20px rgba(135, 206, 250, 0.5);
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.logo-text:hover {
+  color: #87cefa;
+  text-shadow: 0 0 15px rgba(135, 206, 250, 0.3);
+}
+
+.logo-subtitle {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.logo-subtitle:hover {
+  color: #ffffff;
+}
+
+.status-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(135, 206, 250, 0.3);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #87cefa;
+  background: rgba(135, 206, 250, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.status-badge:hover {
+  background: rgba(135, 206, 250, 0.15);
+  border-color: #87cefa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(135, 206, 250, 0.2);
+}
+
+.status-badge i {
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.status-badge:hover i {
+  transform: scale(1.1);
+}
+
+.login-form {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(135, 206, 250, 0.2);
+  padding: 2.5rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(135, 206, 250, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.login-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(135, 206, 250, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.login-form:hover::before {
+  left: 100%;
+}
+
+.login-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(135, 206, 250, 0.2);
+}
+
+.login-form .text {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #87cefa;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.login-form .subtitle {
+  font-size: 0.9rem;
+  color: #cccccc;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form .field {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.field .input-group {
+  background: rgba(42, 42, 42, 0.8);
+  border: 1px solid rgba(58, 58, 58, 0.8);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.field .input-group:hover {
+  border-color: rgba(135, 206, 250, 0.5);
+  box-shadow: 0 0 0 3px rgba(135, 206, 250, 0.1);
+  transform: translateY(-1px);
+}
+
+.field .input-group:focus-within {
+  border-color: #87cefa;
+  box-shadow: 0 0 0 3px rgba(135, 206, 250, 0.2);
+  background: rgba(36, 36, 36, 0.9);
+  transform: translateY(-2px);
+}
+
+.field .input-group-text {
+  color: #cccccc;
+  font-size: 1.1rem;
+  padding: 0.875rem 1rem;
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.field .input-group:hover .input-group-text {
+  color: #87cefa;
+}
+
+.field .form-control {
+  background: transparent;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.875rem 1rem;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.field .form-control::placeholder {
+  color: #888888;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.field .form-control:focus {
+  background: transparent;
+  box-shadow: none;
+}
+
+.field .form-control:focus::placeholder {
+  color: #87cefa;
+  opacity: 0.7;
+}
+
+/* Custom button styling */
+.btn-primary {
+  background: linear-gradient(135deg, #87cefa 0%, #5f9ea0 100%);
+  border: none;
+  padding: 0.875rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: #000000;
+  cursor: pointer;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5f9ea0 0%, #4682b4 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(135, 206, 250, 0.4);
+  color: #000000;
+}
+
+.btn-primary:active {
+  transform: translateY(-1px) scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+.btn-outline-primary {
+  border: 2px solid #87cefa;
+  color: #87cefa;
+  background: transparent;
+  padding: 0.875rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-outline-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(135, 206, 250, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-outline-primary:hover::before {
+  left: 100%;
+}
+
+.btn-outline-primary:hover {
+  background: linear-gradient(135deg, #87cefa 0%, #5f9ea0 100%);
+  color: #000000;
+  border-color: #87cefa;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(135, 206, 250, 0.3);
+}
+
+.btn-outline-primary:active {
+  transform: translateY(-1px) scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+.btn-outline-secondary {
+  border: 2px solid #888888;
+  color: #888888;
+  background: transparent;
+  padding: 0.875rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-outline-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(136, 136, 136, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-outline-secondary:hover::before {
+  left: 100%;
+}
+
+.btn-outline-secondary:hover {
+  background: linear-gradient(135deg, #888888 0%, #666666 100%);
+  color: #ffffff;
+  border-color: #888888;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(136, 136, 136, 0.3);
+}
+
+.btn-outline-secondary:active {
+  transform: translateY(-1px) scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+.text-divider {
+  color: #888888;
+  font-size: 0.875rem;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+  padding: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+.text-divider:hover {
+  color: #87cefa;
+  transform: scale(1.05);
+}
+
+.text-divider::before,
+.text-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #888888, transparent);
+  transition: all 0.3s ease;
+}
+
+.text-divider:hover::before,
+.text-divider:hover::after {
+  background: linear-gradient(90deg, transparent, #87cefa, transparent);
+  width: 35px;
+}
+
+.text-divider::before {
+  left: -40px;
+}
+
+.text-divider::after {
+  right: -40px;
+}
+
+/* Registration link hover effect */
+.registration-link {
+  color: #87cefa;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.registration-link:hover {
+  color: #5f9ea0;
+  text-decoration: none;
+  transform: translateY(-1px);
+  text-shadow: 0 0 10px rgba(135, 206, 250, 0.3);
+}
+
+.registration-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #87cefa;
+  transition: width 0.3s ease;
+}
+
+.registration-link:hover::after {
+  width: 100%;
+}
+
+/* Forget password link styling */
+.forget-password-link {
+  color: #87cefa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.forget-password-link:hover {
+  color: #5f9ea0;
+  transform: translateY(-1px);
+  text-shadow: 0 0 8px rgba(135, 206, 250, 0.4);
+}
+
+.forget-password-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #87cefa, #5f9ea0);
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.forget-password-link:hover::after {
+  width: 100%;
+}
+
+/* Demo section */
+.demo-section {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+}
+
+.demo-section i {
+  color: #000;
+  margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .login-form {
+    padding: 2rem 1rem;
+    margin: 0.5rem;
+  }
+  
+  .login-form .text {
+    font-size: 1.5rem;
+  }
+  
+  .field .form-control {
+    font-size: 0.95rem;
+  }
+  
+  .btn-primary,
+  .btn-outline-primary,
+  .btn-outline-secondary {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+  
+  .status-badges {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .container-fluid {
+    padding: 1rem 2rem;
+  }
+  
+  .login-form {
+    padding: 2.5rem 2rem;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+    padding: 1rem 3rem;
+  }
+  
+  .login-form {
+    padding: 2.5rem 2.5rem;
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0.5rem;
+  }
+  
+  .login-form {
+    border-radius: 12px;
+  }
+}
+
+/* Focus states for accessibility */
+.field .form-control:focus {
+  outline: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #87cefa;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5f9ea0;
+}

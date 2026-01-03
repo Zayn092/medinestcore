@@ -1,0 +1,421 @@
+:root {
+    --primary-blue: #4fc3f7; /* Light blue */
+    --dark-bg: #0f0f0f; /* Black */
+    --card-bg: #181a1b; /* Very dark grey */
+    --text-light: #ffffff; /* White */
+    --text-muted: #b0b3b8; /* Grey */
+    --border-color: #374151; /* Grey */
+    --input-bg: #23272a; /* Slightly lighter dark */
+}
+
+body {
+    background-color: var(--dark-bg);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-light);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.signup-container {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    margin: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.signup-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(79, 195, 247, 0.08), transparent);
+    transition: left 0.8s ease;
+}
+
+.signup-container:hover::before {
+    left: 100%;
+}
+
+.signup-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-icon::after {
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.logo-section:hover .logo-icon {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 10px 25px rgba(79, 195, 247, 0.4);
+}
+
+.logo-section:hover .logo-icon::after {
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+}
+
+.brand-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin: 0;
+}
+
+.tagline {
+    color: var(--text-light);
+    font-size: 16px;
+    margin: 5px 0 20px 0;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    color: var(--primary-blue);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.feature-item i {
+    margin-right: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background-color: rgba(79, 195, 247, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 195, 247, 0.2);
+}
+
+.feature-item:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.form-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.section-header:hover .section-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 5px 15px rgba(79, 195, 247, 0.3);
+}
+
+.section-header:hover .section-icon::before {
+    width: 100%;
+    height: 100%;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.form-control, .form-select {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.form-control:hover, .form-select:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(79, 195, 247, 0.1);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--input-bg);
+    border-color: var(--primary-blue);
+    color: var(--text-light);
+    box-shadow: 0 0 0 0.2rem rgba(79, 195, 247, 0.25);
+    transform: translateY(-2px);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.form-label {
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    border: none;
+    border-radius: 8px;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #039be5;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(79, 195, 247, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-light);
+}
+
+.login-link a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.login-link a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #039be5;
+    transform: translateX(5px);
+}
+
+.login-link a:hover::after {
+    width: 100%;
+}
+
+.medical-section .section-icon {
+    background: var(--primary-blue);
+}
+
+.security-section .section-icon {
+    background: var(--primary-blue);
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-blue);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 195, 247, 0.3);
+}
+
+.btn-outline-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.dynamic-medicine-section {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(79, 195, 247, 0.05);
+    position: relative;
+}
+
+.remove-medicine-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #dc3545;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remove-medicine-btn:hover {
+    background: #c82333;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 30px 20px;
+    }
+    
+    .features {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .form-title {
+        font-size: 24px;
+    }
+    
+    .brand-name {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .signup-container {
+        padding: 20px 15px;
+    }
+    
+    .form-title {
+        font-size: 20px;
+    }
+    
+    .section-title {
+        font-size: 18px;
+    }
+}

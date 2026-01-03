@@ -1,0 +1,7 @@
+{
+    "email": "zainamman70@gmail.com",
+    "name": "M. Zain",
+    "reset_link": "http:\/\/localhost\/qrmedisphare\/reset_password.php?token=87fe28d92521b0e1f1f80b826355e53c2114c8ee54b5bb79ec6ce6309013dc5d",
+    "timestamp": "2025-09-27 14:55:10",
+    "expires": "2025-09-27 15:55:10"
+}
